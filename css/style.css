@@ -1,0 +1,126 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background: #333;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #1abc9c;
+  }
+  
+  .toggle-btn {
+    display: none;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    padding: 60px 20px;
+    transition: 0.3s ease;
+  }
+  
+  .sidebar a {
+    display: block;
+    margin: 20px 0;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    color: #1abc9c;
+  }
+  
+  /* Home Section */
+  .home {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .hero {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 span {
+    color: #1abc9c;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      display: none;
+    }
+    .toggle-btn {
+      display: block;
+    }
+    .sidebar {
+      width: 200px;
+    }
+  }
+  
